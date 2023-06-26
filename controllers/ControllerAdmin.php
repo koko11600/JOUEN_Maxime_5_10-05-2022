@@ -101,10 +101,10 @@ class ControllerAdmin
     {
         if (isset($_GET['id'], $_GET['id'])) {
             $this->userManager = new UserManager();
-            $result = $this->userManager->modifyUser($_GET['id']);
+            $result = $this->userManager->ModifyUserByI($_GET['id']);
             header('Location: admin&userManagement');
         }
-    }
+    } 
 
     /**
      * Delete post function
