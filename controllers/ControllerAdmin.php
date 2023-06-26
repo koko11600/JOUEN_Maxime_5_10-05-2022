@@ -86,6 +86,11 @@ class ControllerAdmin
      */
     private function deleteUserAction(): void
     {
+        if (isset($_GET['id'], $_GET['id'])) {
+            $this->userManager = new UserManager();
+            $result = $this->userManager->deleteUser($_GET['id']);
+            header('Location: admin&userManagement');
+        }
     }
 
     /**
@@ -94,6 +99,7 @@ class ControllerAdmin
      */
     private function modifyUserAction(): void
     {
+        ///
     }
 
     /**
