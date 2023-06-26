@@ -99,7 +99,11 @@ class ControllerAdmin
      */
     private function modifyUserAction(): void
     {
-        ///
+        if (isset($_GET['id'], $_GET['id'])) {
+            $this->userManager = new UserManager();
+            $result = $this->userManager->ModifyUser($_GET['id']);
+            header('Location: admin&UserManagement');
+        }
     }
 
     /**
