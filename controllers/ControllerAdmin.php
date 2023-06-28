@@ -100,7 +100,7 @@ class ControllerAdmin
     private function modifyUserAction(): void
     {
         if (isset($_GET['id'], $_GET['id'])) {
-            $this->userManager = new UserManager();
+            $this->userManager = new UserManager(); 
             $result = $this->userManager->modifyUser($_GET['id']);
             header('Location: admin&userManagement');
         }
@@ -112,12 +112,14 @@ class ControllerAdmin
      */
     private function deletePostAction(): void
     {
-        if (isset($_GET['id'], $_GET['id'])) {
+        if (isset($_GET['id'])) {
             $this->postManager = new PostManager();
             $result = $this->postManager->deletePost($_GET['id']);
-            header('Location: admin&commentManagement');
+            header('Location: admin.php?action=commentManagement');
+            exit();
         }
     }
+    
 
     /**
      * Validate comment function

@@ -259,7 +259,7 @@ class UserManager extends Model
     private function modifyUserById($table, $id)
     {
         $this->getBdd();
-        $req = self::$bdd->prepare("UPDATE $table set status = 1 WHERE id = ? ");
+        $req = self::$bdd->prepare("UPDATE * FROM $table set status = 1 WHERE id = ? ");
         $req->execute(array($id));
         $user = $req->fetch(PDO::FETCH_ASSOC);
         $req->closeCursor();
