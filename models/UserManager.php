@@ -242,7 +242,8 @@ class UserManager extends Model
     private function deleteUserById($table, $id)
     {
         $this->getBdd();
-        $req = self::$bdd->prepare("DELETE * FROM $table WHERE id = ? ");
+        $result = "L'utilisateur est supprimé avec succès";
+        $req = self::$bdd->prepare("DELETE FROM $table WHERE id = ? ");
         $req->execute(array($id));
         $user = $req->fetch(PDO::FETCH_ASSOC);
         $req->closeCursor();
