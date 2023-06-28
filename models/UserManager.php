@@ -261,7 +261,7 @@ class UserManager extends Model
     {
         $this->getBdd();
         $result = "L'utilisateur vient de passé administrateur du site";
-        $req = self::$bdd->prepare("UPDATE $table SET status = 1, dateUpdated = ? WHERE id = ? ");
+        $req = self::$bdd->prepare("UPDATE $table SET role = 1 WHERE id = ? ");
         $req->execute(array($id));
         $user = $req->fetch(PDO::FETCH_ASSOC);
         $req->closeCursor();
