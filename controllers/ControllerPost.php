@@ -66,7 +66,7 @@ class ControllerPost
     /**
      * Add comment page detail function
      * @return void
-     */
+     */  
     private function addCommentAction(): void
     {
          if (!empty($_POST)) {

@@ -91,8 +91,7 @@ class ControllerAdmin
             $result = $this->userManager->deleteUser($_GET['id']);
         }
         
-        header('Location: admin.php?action=userManagement');
-        exit();
+        header('Location: admin&userManagement');   
     }
 
     /**
@@ -104,7 +103,7 @@ class ControllerAdmin
         if (isset($_GET['id'], $_GET['id'])) {
             $this->userManager = new UserManager(); 
             $result = $this->userManager->modifyUser($_GET['id']);
-            header('Location: admin&serManagement');
+            header('Location: admin&userManagement');
         }
     } 
 
