@@ -172,7 +172,6 @@ class ControllerAdmin
      */
     private function modifyPost(): void
     {
-
     }
 
     /**
