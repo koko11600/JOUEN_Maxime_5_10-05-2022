@@ -130,11 +130,11 @@ class PostManager extends Model
     private function modifyPostById($table, $id) 
     {
         $this->getBdd();
-        $result = "L'article est modifier avec succes";
-        $req = self::$bdd->prepare("UPDATE FROM $table WHERE id = ? ");
+        $req = self::$bdd->prepare("SELECT * FROM $table WHERE id = ? ");
         $req->execute(array($id));
+        $post = $req->fetch(PDO::FETCH_ASSOC);
         $req->closeCursor();
-        return $result;
+        return $post;
     }
 
     /**

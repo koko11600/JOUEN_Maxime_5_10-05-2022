@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<title>Bōna | blog personnel</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">

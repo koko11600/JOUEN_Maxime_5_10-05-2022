@@ -172,6 +172,11 @@ class ControllerAdmin
      */
     private function modifyPost(): void
     {
+        if (isset($_GET['id'], $_GET['id'])) {
+            $this->postManager = new PostManager();
+            $post = $this->postManager->modifyPost($_GET['id']);
+            header('Location: admin&postManagement');
+    }
     }
 
     /**
