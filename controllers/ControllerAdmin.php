@@ -90,8 +90,8 @@ class ControllerAdmin
             $this->userManager = new UserManager();
             $result = $this->userManager->deleteUser($_GET['id']);
         }
-        
-        header('Location: admin&userManagement');   
+
+        header('Location: admin&userManagement');
     }
 
     /**
@@ -101,11 +101,11 @@ class ControllerAdmin
     private function modifyUserAction(): void
     {
         if (isset($_GET['id'], $_GET['id'])) {
-            $this->userManager = new UserManager(); 
+            $this->userManager = new UserManager();
             $result = $this->userManager->modifyUser($_GET['id']);
             header('Location: admin&userManagement');
         }
-    } 
+    }
 
     /**
      * Delete post function
@@ -156,7 +156,7 @@ class ControllerAdmin
 
     {
     }
-    
+
 
     /**
      * Create a new post action function
@@ -175,8 +175,12 @@ class ControllerAdmin
         if (isset($_GET['id'], $_GET['id'])) {
             $this->postManager = new PostManager();
             $post = $this->postManager->modifyPost($_GET['id']);
+            $this->categoryManager = new CategoryManager();
+            $categories = $this->categoryManager->getAllCategory();
+            $this->view = new View('ModifyPost');
+            $this->view->generate(array('post' => $post, 'categories' => $categories));
             header('Location: admin&postManagement');
-    }
+        }
     }
 
     /**
