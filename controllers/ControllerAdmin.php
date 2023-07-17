@@ -189,5 +189,10 @@ class ControllerAdmin
      */
     private function editPostAction(): void
     {
+        if (!empty($_POST)) {
+
+        } else {
+            header('Location: admin&modifyPost&id='.$_GET['id']);
+        } 
     }
 }

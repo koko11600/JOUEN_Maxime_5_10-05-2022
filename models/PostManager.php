@@ -145,7 +145,7 @@ class PostManager extends Model
      */
     private function modifyPostByIdAction($table, $id)
     {
-        
+        /* Update + requete */ 
     }
 
     /**
