@@ -10,7 +10,7 @@ abstract class Model
      */
     private static function setBdd()
     {
-        self::$bdd = new PDO('mysql:host=localhost;dbname=oc_p5_maxime','root','root');
+        self::$bdd = new PDO('mysql:host=localhost;dbname=review_oc_p5','root','');
         //we use PDO constants to handle errors
         self::$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     }

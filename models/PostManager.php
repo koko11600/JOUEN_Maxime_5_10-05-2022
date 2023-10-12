@@ -145,7 +145,15 @@ class PostManager extends Model
      */
     private function modifyPostByIdAction($table, $id)
     {
-        /* Update + requete */ 
+        $this->getBdd();
+        $newFields = array_map ('htmlspecialchars' , $_POST);
+        $result = "Modification de l'article effectuer avec succès";
+
+        $req = self::$bdd->prepare("UPDATE $table SET id_category = ?, title = ?, content = ?, chapo = ?, dateUpdated = ? WHERE id = ? ");
+        $req->execute(array($newFields['category'], $newFields['title'], $newFields['content'], $newFields['chapo'], date("Y-m-d H:i:s"), $id));
+        $req->closeCursor();
+
+        return $result;
     }
 
     /**

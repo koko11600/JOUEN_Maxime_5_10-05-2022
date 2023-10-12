@@ -190,9 +190,12 @@ class ControllerAdmin
     private function editPostAction(): void
     {
         if (!empty($_POST)) {
-
+            $this->postManager = new PostManager();
+            $post = $this->postManager->editPostAction($_POST['idPost']);
+            header('Location: admin&postManagement');
         } else {
             header('Location: admin&modifyPost&id='.$_GET['id']);
+            
         } 
     }
 }
