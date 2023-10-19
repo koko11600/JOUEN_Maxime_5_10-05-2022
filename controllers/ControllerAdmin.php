@@ -155,15 +155,21 @@ class ControllerAdmin
     private function newPost(): void
 
     {
+        $this->categoryManager = new CategoryManager();
+        $categories = $this->categoryManager->getAllCategory();
+        $this->view = new View('NewPost');
+        $this->view->generate(array('categories' => $categories));
     }
+
 
 
     /**
      * Create a new post action function
      * @return void
      */
-    private function addPostAction(): void
+    private function addPostAction(): void 
     {
+     
     }
 
     /**
