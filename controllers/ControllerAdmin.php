@@ -116,7 +116,7 @@ class ControllerAdmin
         if (isset($_GET['id'], $_GET['id'])) {
             $this->postManager = new PostManager();
             $result = $this->postManager->deletePost($_GET['id']);
-            header('Location: admin&commentManagement');
+            header('Location: admin&postManagement');
         }
     }
 
@@ -167,9 +167,15 @@ class ControllerAdmin
      * Create a new post action function
      * @return void
      */
-    private function addPostAction(): void 
+    private function addPostAction(): void
     {
-     
+        if (!empty($_POST)) {
+            $this->postManager = new PostManager();
+            $result = $this->postManager->addPost();
+            header('Location: admin&postManagement');
+        } else {
+            header('Location: admin&newPost');
+        }
     }
 
     /**
@@ -200,8 +206,7 @@ class ControllerAdmin
             $post = $this->postManager->editPostAction($_POST['idPost']);
             header('Location: admin&postManagement');
         } else {
-            header('Location: admin&modifyPost&id='.$_GET['id']);
-            
-        } 
+            header('Location: admin&modifyPost&id=' . $_GET['id']);
+        }
     }
 }
