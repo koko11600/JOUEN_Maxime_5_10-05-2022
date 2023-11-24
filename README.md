@@ -1,12 +1,12 @@
 Installation : 
 
-
+```text
 1 - Lancer la commande : git https://github.com/koko11600/Projet_5_OpenclassRoom.git
 
 2 - Lancer la commande : cd Projet_5_OpenclassRoom
 
 3 - Lancer dans le terminal composer install 
-
+```
 Remarques :
 
 1 - Mettre à jour models/Model.php
