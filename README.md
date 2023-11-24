@@ -14,7 +14,18 @@ Pour pouvoir connecter la base de données
 
 2 - Mettre à jour Models/ServiceManager.php
 
-Pour profiter de l'envoi d'email
+
+Changer les differentes informations concernant l'envoi de mail : /models/ServiceManager.php
+
+```text
+$mail->isSMTP();
+$mail->Host = Le nom d'hôte de votre serveur de messagerie (ex: smtp.gmail.com)
+$mail->SMTPAuth = true ou false (Selon les informations communiqué par votre serveur de messagerie, celle-ci demandera l'authentification SMTP ou non)
+$mail->Username = L'adresse mail
+$mail->Password = Le mot de passe de votre adresse mail
+$mail->SMTPSecure = tls ou ssl (Selon les informations communiqué par votre serveur de messagerie) 
+```
+
 
 Projet : 
 
