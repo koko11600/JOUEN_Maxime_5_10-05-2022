@@ -1,8 +1,8 @@
 Installation : 
 
-1 - Lancer la commande : git https://github.com/koko11600/JOUEN_Maxime_5_10-05-2022.git
+1 - Lancer la commande : git https://github.com/koko11600/Projet_5_OpenclassRoom.git
 
-2 - Lancer la commande : cd JOUEN_Maxime_5_10-05-2022
+2 - Lancer la commande : cd Projet_5_OpenclassRoom
 
 3 - Lancer dans le terminal composer install 
 
