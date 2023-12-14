@@ -88,7 +88,8 @@ class ControllerAdmin
     {
         if (isset($_GET['id'])) {
             $this->userManager = new UserManager();
-            $result = $this->userManager->deleteUser($_GET['id']);
+            $this->userManager->deleteUser($_GET['id']);
+
         }
 
         header('Location: admin&userManagement');
@@ -102,7 +103,7 @@ class ControllerAdmin
     {
         if (isset($_GET['id'], $_GET['id'])) {
             $this->userManager = new UserManager();
-            $result = $this->userManager->modifyUser($_GET['id']);
+            $this->userManager->modifyUser($_GET['id']);
             header('Location: admin&userManagement');
         }
     }
@@ -203,7 +204,7 @@ class ControllerAdmin
     {
         if (!empty($_POST)) {
             $this->postManager = new PostManager();
-            $post = $this->postManager->editPostAction($_POST['idPost']);
+            $this->postManager->editPostAction($_POST['idPost']);
             header('Location: admin&postManagement');
         } else {
             header('Location: admin&modifyPost&id=' . $_GET['id']);
