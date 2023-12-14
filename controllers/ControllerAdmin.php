@@ -116,7 +116,7 @@ class ControllerAdmin
     {
         if (isset($_GET['id'], $_GET['id'])) {
             $this->postManager = new PostManager();
-            $result = $this->postManager->deletePost($_GET['id']);
+            $this->postManager->deletePost($_GET['id']);
             header('Location: admin&postManagement');
         }
     }
@@ -129,7 +129,7 @@ class ControllerAdmin
     {
         if (isset($_GET['id'], $_GET['id'])) {
             $this->commentManager = new CommentManager();
-            $result = $this->commentManager->validateComment($_GET['id']);
+            $this->commentManager->validateComment($_GET['id']);
             header('Location: admin&commentManagement');
         }
     }
@@ -172,7 +172,7 @@ class ControllerAdmin
     {
         if (!empty($_POST)) {
             $this->postManager = new PostManager();
-            $result = $this->postManager->addPost();
+            $this->postManager->addPost();
             header('Location: admin&postManagement');
         } else {
             header('Location: admin&newPost');
