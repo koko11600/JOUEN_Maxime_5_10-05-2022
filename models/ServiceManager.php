@@ -41,7 +41,7 @@ class ServiceManager extends Model
 
         //$mail->addCC('cc@example.com');
         //$mail->addBCC('bcc@example.com');
-
+            
         // Set email format to HTML
         $mail->isHTML(true);
 
