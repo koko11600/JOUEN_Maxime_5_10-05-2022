@@ -38,10 +38,6 @@ class ServiceManager extends Model
 
         // Add a recipient
         $mail->addAddress($newFields['email']);
-
-        //$mail->addCC('cc@example.com');
-        //$mail->addBCC('bcc@example.com');
-            
         // Set email format to HTML
         $mail->isHTML(true);
 
